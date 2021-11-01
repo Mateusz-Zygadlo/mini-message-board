@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  div(class='messageFormContainer')
+    form(method="POST")
+      input(class="messageFormTopic" placeholder="Topic" type="text") 
+      textarea(class="messageFormContent" placeholder="Message" type="text")
+      input(class="messageFormAuthor" placeholder="Author" type="text")
+    button(class="messageFormSubmit" type="submit") Submit
