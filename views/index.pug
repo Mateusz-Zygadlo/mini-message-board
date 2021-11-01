@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  div(class="addMessage") Add message
-  div(class="messages")
-    div(class="messageBox")
-      h1(class="messageTopic") This is a title
-      p(class="messageContent") This is a message content This is a message content This is a message content
-      div(class="messageTime")
-        p(class="messageAuthor") Author
-        p(class="messageData") 2 days ago
+  a(class="addMessage" href="/new") Add message
+  each message in messages 
+    div(class="messages")
+      div(class="messageBox")
+        p(class="messageContent") #{message.text}
+        div(class="messageTime")
+          p(class="messageAuthor") #{message.user}
+          p(class="messageData") #{message.added}
